@@ -1,0 +1,45 @@
+body {
+  color: black;
+  background-color: rgb(245, 240, 248);
+}
+.container {
+  padding: 0 7%;
+}
+.navbar {
+  display: flex;
+}
+.navbar-ul {
+  display: flex;
+  place-content: center;
+  margin: auto;
+  margin-right: 0;
+}
+li {
+  display: flex;
+  padding: 1rem;
+}
+p {
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.form-input {
+  display: flex;
+  place-content: center;
+}
+input {
+  margin: 1rem;
+}
+#todosContainer {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  list-style-type: none;
+  margin: auto;
+  margin-right: 0;
+}
+#todosContainer > li {
+  margin: 0 20%;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <h2>Todo App</h2>
+        <ul class="navbar-ul">
+          <li><a href="#">Personal</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">Misc</a></li>
+        </ul>
+      </div>
+      <form action="/index.html" method="get">
+        <div class="form-input">
+          <input type="text" name="todo" id="todo" />
+          <input type="button" name="addTodo" id="addTodo" value="+" />
+        </div>
+        <div>
+          <ul id="todosContainer"></ul>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
