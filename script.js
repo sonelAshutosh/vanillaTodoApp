@@ -1,7 +1,9 @@
 let todo = document.getElementById('todo');
 let addTodo = document.getElementById('addTodo');
+let navbarUl = document.getElementById('navbar-ul');
+let navOpenButton = document.getElementById('navOpenButton');
 let todosContainer = document.getElementById('todosContainer');
-
+let navCloseButton = document.getElementById('navCloseButton');
 let todoArray = [];
 
 addTodo.addEventListener('click', () => {
@@ -49,3 +51,10 @@ function populateList() {
     todosContainer.appendChild(newTodo);
   });
 }
+
+navCloseButton.addEventListener('click', () => {
+  navbarUl.style.top = '-900px';
+});
+navOpenButton.addEventListener('click', () => {
+  navbarUl.style.top = '-240px';
+});

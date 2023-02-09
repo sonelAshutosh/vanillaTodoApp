@@ -36,6 +36,10 @@ img {
   margin: auto;
   margin-right: 87px;
 }
+.navCloseButton,
+.navOpenButton {
+  display: none;
+}
 .navbar-ul ul li {
   padding: 0 5%;
 }
@@ -68,10 +72,40 @@ input[type='text']:focus {
 }
 @media only screen and (max-width: 720px) {
   .navbar-ul {
-    background-color: red;
+    border-radius: 5px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    height: 75vh;
+    width: 80vw;
+    transform: translate(0, 45%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: top 0.5s ease-in-out;
+    top: -240px;
+  }
+  .navCloseButton {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+  .navOpenButton {
+    display: block;
+    margin: auto;
+    margin-right: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
   }
   .navbar-ul ul {
-    position: absolute;
     flex-direction: column;
+  }
+  .navbar-ul ul li {
+    padding: 3rem;
   }
 }
