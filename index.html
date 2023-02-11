@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+  </head> 
   <body onload="getLocalStorage()">
     <div class="container">
       <div class="navbar">
@@ -25,7 +25,15 @@
       <form action="/index.html" method="get">
         <div class="form-input">
           <input type="text" name="todo" id="todo" />
-          <input type="button" name="addTodo" id="addTodo" value="+" />
+          <div>
+            <label for="number">Set Timer: MIN:SEC</label>
+            <div>
+            <input type="text" id="number_minutes" onkeypress="return isNumberKey(event)">
+            <input type="text" id="number_seconds" onkeypress="return isNumberKey(event)">
+          </div>
+          </div>
+          <input type="button" name="addTodo" id="addTodo" value="+" />  
+          </div>
         </div>
         <div class="todosContainerDiv">
           <ul id="todosContainer"></ul>
