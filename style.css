@@ -1,45 +1,111 @@
-body {
-  color: black;
-  background-color: rgb(245, 240, 248);
-}
-.container {
-  padding: 0 7%;
-}
-.navbar {
-  display: flex;
-}
-.navbar-ul {
-  display: flex;
-  place-content: center;
-  margin: auto;
-  margin-right: 0;
-}
-li {
-  display: flex;
-  padding: 1rem;
-}
-p {
-  background-color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 a {
   text-decoration: none;
-  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.container {
+  padding: 0 10%;
+  overflow: hidden;
+}
+/* .navbar {
+  overflow: hidden;
+} */
+.navbar,
+.navbar-ul ul {
+  display: flex;
+  place-items: center;
+}
+.navbar h2 {
+  padding: 1rem;
+}
+.navbar-ul {
+  margin: auto;
+  margin-right: 87px;
+}
+.navCloseButton,
+.navOpenButton {
+  display: none;
+}
+.navbar-ul ul li {
+  padding: 0 5%;
 }
 .form-input {
   display: flex;
   place-content: center;
 }
-input {
-  margin: 1rem;
+.form-input > * {
+  margin: 0.25rem 1rem;
+  padding: 0.5rem;
+}
+.form-input #todo {
+  width: 50%;
+  border: #bababa 1px solid;
+  border-bottom: grey 4px solid;
+  border-radius: 5px;
+}
+input[type='text']:focus {
+  border: none;
+}
+.todosContainerDiv {
+  padding: 1rem 3rem;
 }
 #todosContainer {
-  display: flex;
-  flex-direction: column;
-  place-content: center;
-  list-style-type: none;
-  margin: auto;
-  margin-right: 0;
+  margin: 0.25rem;
 }
-#todosContainer > li {
-  margin: 0 20%;
+#todosContainer li > * {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+@media only screen and (max-width: 720px) {
+  .navbar-ul {
+    border-radius: 5px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    height: 75vh;
+    width: 80vw;
+    transform: translate(0, 45%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: top 0.5s ease-in-out;
+    top: -240px;
+  }
+  .navCloseButton {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+  .navOpenButton {
+    display: block;
+    margin: auto;
+    margin-right: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .navbar-ul ul {
+    flex-direction: column;
+  }
+  .navbar-ul ul li {
+    padding: 3rem;
+  }
 }
