@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App | Miscellaneous</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    Miscellaneous
+  <body onload="getLocalStorage()">
+    <div class="container">
+      <div class="navbar">
+        <a href="/"><img src="/assets/logo.jpg" alt="logo" /> </a>
+        <h2>Todo App</h2>
+        <div id="navbar-ul" class="navbar-ul">
+          <div id="navCloseButton" class="navCloseButton">X</div>
+          <ul>
+            <li><a href="/">Personal</a></li>
+            <li><a href="/professional.html">Professional</a></li>
+            <li><a href="/miscellaneous.html">Miscellaneous</a></li>
+          </ul>
+        </div>
+        <div id="navOpenButton" class="navOpenButton">+</div>
+      </div>
+      <form action="/miscellaneous.html" method="get">
+        <div class="form-input">
+          <input type="text" name="todo" id="todo" />
+          <input type="button" name="addTodo" id="addTodo" value="+" />
+        </div>
+        <h3 id="typeOfTodo"></h3>
+        <div class="todosContainerDiv">
+          <ul id="todosContainer"></ul>
+        </div>
+      </form>
+    </div>
   </body>
+  <script src="script.js"></script>
 </html>

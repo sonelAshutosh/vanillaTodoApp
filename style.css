@@ -63,6 +63,9 @@ input[type='text']:focus {
 .todosContainerDiv {
   padding: 1rem 3rem;
 }
+#typeOfTodo {
+  padding: 2rem 1rem;
+}
 #todosContainer {
   margin: 0.25rem;
 }

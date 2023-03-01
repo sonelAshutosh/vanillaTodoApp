@@ -1,10 +1,13 @@
-let todo = document.getElementById('todo');
-let addTodo = document.getElementById('addTodo');
-let navbarUl = document.getElementById('navbar-ul');
-let navOpenButton = document.getElementById('navOpenButton');
-let todosContainer = document.getElementById('todosContainer');
-let navCloseButton = document.getElementById('navCloseButton');
-let todoArray = [];
+var todo = document.getElementById('todo');
+var addTodo = document.getElementById('addTodo');
+var navbarUl = document.getElementById('navbar-ul');
+var typeOfTodo = document.getElementById('typeOfTodo');
+var navOpenButton = document.getElementById('navOpenButton');
+var todosContainer = document.getElementById('todosContainer');
+var navCloseButton = document.getElementById('navCloseButton');
+var todoArray = [];
+
+var link = window.location.href.split('/')[3].split('.')[0];
 
 addTodo.addEventListener('click', () => {
   if (todo.value == '') {
@@ -27,13 +30,17 @@ function deleteTodo(id) {
 }
 
 function setLocalStorage() {
-  localStorage.setItem('todos', JSON.stringify(todoArray));
+  if (link == '') localStorage.setItem('personal', JSON.stringify(todoArray));
+  else localStorage.setItem(link, JSON.stringify(todoArray));
 }
 
 function getLocalStorage() {
-  let temp = localStorage.getItem('todos');
+  if (link == '') link = 'personal';
+  let temp = localStorage.getItem(link);
+  let string = link;
+  typeOfTodo.innerHTML = string.charAt(0).toUpperCase() + string.slice(1);
+
   if (temp !== null) {
-    console.log(temp);
     todoArray = JSON.parse(temp);
   } else {
     todoArray = [];
